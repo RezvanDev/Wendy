@@ -1,0 +1,120 @@
+.counter {
+  position: relative;
+  padding: 100px 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 450px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("../img/Армянская Свадьба Эстетика.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: grayscale(100%) contrast(1.1) brightness(0.4);
+    z-index: 1;
+  }
+
+  &__wrap {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__waiting {
+    font-family: var(--title-font);
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 1.3;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: var(--counter-color);
+    margin-bottom: 50px;
+  }
+
+  &__end-timer {
+    width: 100%;
+    max-width: 900px;
+    position: relative;
+    z-index: 2;
+    font-family: var(--title-font);
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 1.4;
+    letter-spacing: 6px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--counter-color);
+  }
+}
+
+@include laptop-L {
+  .counter {
+    min-height: 400px;
+    &__waiting {
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+    &__end-timer {
+      font-size: 32px;
+    }
+  }
+}
+
+@include laptop {
+  .counter {
+    padding: 80px 0;
+    min-height: 350px;
+    &__waiting {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+    &__end-timer {
+      font-size: 26px;
+    }
+  }
+}
+
+@include tablet {
+  .counter {
+    padding: 60px 0;
+    min-height: 300px;
+    &__waiting {
+      font-size: 22px;
+      margin-bottom: 20px;
+      letter-spacing: 4px;
+    }
+    &__end-timer {
+      font-size: 20px;
+      letter-spacing: 4px;
+    }
+  }
+}
+
+@include mobile {
+  .counter {
+    padding: 50px 0;
+    min-height: 260px;
+    &__waiting {
+      font-size: 18px;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+    }
+    &__end-timer {
+      font-size: 16px;
+      letter-spacing: 2px;
+      padding: 0 15px;
+    }
+  }
+}

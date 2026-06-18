@@ -1,0 +1,8 @@
+.directory
+.DS_Store
+.AppleDouble
+.LSOverride
+thumbs.db
+node_modules
+dist
+package-lock.json

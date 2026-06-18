@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @include('partials/head.html')
+  <body>
+    <main class="main">
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="container hero__container">
+          <div class="hero__lang-switch lang-switch">
+            <button class="lang-switch__btn lang-switch__btn_ru active" data-lang="ru">RU</button>
+            <span class="lang-switch__divider">/</span>
+            <button class="lang-switch__btn lang-switch__btn_uz" data-lang="uz">UZ</button>
+          </div>
+          <div class="hero__content">
+            <div class="hero__subtitle">
+              <span class="lang-ru">Приглашение на свадьбу</span>
+              <span class="lang-uz">Nikoh to'yiga taklifnoma</span>
+            </div>
+            <h1 class="hero__title">
+              <span class="lang-ru">Лазиз & Шахидабону</span>
+              <span class="lang-uz">Laziz & Shahidabonu</span>
+            </h1>
+            <div class="hero__date">27.06.2026</div>
+            <div class="hero__photo-wrap">
+              <img class="hero__photo" src="img/photo_2026-06-18 16.51.08.jpeg" alt="Лазиз и Шахидабону">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Friends Invitation Greeting -->
+      <section class="friends">
+        <div class="container">
+          <h2 class="friends__title">
+            <span class="lang-ru">Дорогие родные <br /> и друзья&nbsp;!</span>
+            <span class="lang-uz">Aziz yaqinlarimiz <br /> va do'stlarimiz&nbsp;!</span>
+          </h2>
+          <p class="friends__desc">
+            <span class="lang-ru">С огромной радостью приглашаем вас разделить с нами один из самых важных и счастливых моментов нашей жизни - день нашей свадьбы!</span>
+            <span class="lang-uz">Sizni hayotimizdagi eng muhim va baxtli damlardan biri - nikoh to'yimiz kunini biz bilan birga baham ko'rishga katta mamnuniyat bilan taklif etamiz!</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Invitation Details Card -->
+      <section class="invite">
+        <div class="container">
+          <ul class="invite__list">
+            <li id="invite1" class="invite__item invite__item_text" style="width: 100%; grid-column: span 2;">
+              <h3 class="invite__title invite__title_time">27.06.2026</h3>
+              <ul class="invite__sublist">
+                <li class="invite__subitem">
+                  <p class="invite__subitem invite__subitem_text">
+                    <span class="lang-ru">Пусть эта дата останется в вашей памяти навсегда, как и для нас этот радостный момент.</span>
+                    <span class="lang-uz">Ushbu sana biz kabi sizning ham xotirangizda abadiy qolsin, shuningdek, biz uchun ham bu quvonchli lahzadir.</span>
+                  </p>
+                </li>
+                <li class="invite__subitem">
+                  <p class="invite__subitem invite__subitem_text">
+                    <span class="lang-ru">Мы с нетерпением ждем, чтобы разделить с вами этот особенный день, полный любви, радости и счастливых моментов.</span>
+                    <span class="lang-uz">Biz muhabbat, quvonch va baxtli damlarga to'la ushbu maxsus kunni siz bilan birga baham ko'rishni intizorlik bilan kutamiz.</span>
+                  </p>
+                </li>
+                <li class="invite__subitem">
+                  <p class="invite__subitem invite__subitem_text">
+                    <span class="lang-ru">Ваша поддержка и присутствие сделают наш день еще более незабываемым.</span>
+                    <span class="lang-uz">Sizning qo'llab-quvvatlashingiz va ishtirokingiz kunimizni yanada unutilmas qiladi.</span>
+                  </p>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Custom Wedding Calendar -->
+      <section class="wedding-calendar">
+        <div class="container">
+          <h2 class="wedding-calendar__title">
+            <span class="lang-ru">Календарь свадьбы</span>
+            <span class="lang-uz">To'y taqvimi</span>
+          </h2>
+          <div class="wedding-calendar__month">
+            <span class="lang-ru">Июнь 2026</span>
+            <span class="lang-uz">Iyun 2026</span>
+          </div>
+          <div class="calendar-grid">
+            <div class="calendar-grid__header">
+              <span class="lang-ru">Пн</span><span class="lang-uz">Du</span>
+              <span class="lang-ru">Вт</span><span class="lang-uz">Se</span>
+              <span class="lang-ru">Ср</span><span class="lang-uz">Ch</span>
+              <span class="lang-ru">Чт</span><span class="lang-uz">Pa</span>
+              <span class="lang-ru">Пт</span><span class="lang-uz">Ju</span>
+              <span class="lang-ru">Сб</span><span class="lang-uz">Sh</span>
+              <span class="lang-ru">Вс</span><span class="lang-uz">Ya</span>
+            </div>
+            <div class="calendar-grid__days">
+              <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span>
+              <span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span>
+              <span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span>
+              <span>22</span><span>23</span><span>24</span><span>25</span><span>26</span><span class="calendar-grid__wedding-day" title="Wedding Day!">27</span><span>28</span>
+              <span>29</span><span>30</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Day Plan (Timeline) -->
+      <section class="timeline">
+        <div class="container">
+          <h2 class="timeline__title">
+            <span class="lang-ru">План дня</span>
+            <span class="lang-uz">Kun tartibi</span>
+          </h2>
+          <ul class="timeline__list">
+            <li id="timeline1" class="timeline__item">
+              <picture>
+                <source data-srcset="img/transfer.webp" srcset="#" type="image/webp" />
+                <img class="timeline__img lazyload" data-src="img/transfer.png" src="#" alt="Сбор гостей" />
+              </picture>
+              <p class="timeline__time">15:30</p>
+              <span class="timeline__dot"></span>
+              <p class="timeline__name">
+                <span class="lang-ru">Сбор гостей</span>
+                <span class="lang-uz">Mehmonlar yig'ilishi</span>
+              </p>
+            </li>
+            <li id="timeline2" class="timeline__item">
+              <picture>
+                <source data-srcset="img/welcome.webp" srcset="#" type="image/webp" />
+                <img class="timeline__img lazyload" data-src="img/welcome.png" src="#" alt="Фуршет" />
+              </picture>
+              <p class="timeline__time">16:00</p>
+              <span class="timeline__dot"></span>
+              <p class="timeline__name">
+                <span class="lang-ru">Фуршет</span>
+                <span class="lang-uz">Furshet</span>
+              </p>
+            </li>
+            <li id="timeline3" class="timeline__item">
+              <picture>
+                <source data-srcset="img/ceremony.webp" srcset="#" type="image/webp" />
+                <img class="timeline__img lazyload" data-src="img/ceremony.png" src="#" alt="Церемония" />
+              </picture>
+              <p class="timeline__time">16:30</p>
+              <span class="timeline__dot"></span>
+              <p class="timeline__name">
+                <span class="lang-ru">Церемония</span>
+                <span class="lang-uz">Nikoh marosimi</span>
+              </p>
+            </li>
+            <li id="timeline4" class="timeline__item">
+              <picture>
+                <source data-srcset="img/dinner.webp" srcset="#" type="image/webp" />
+                <img class="timeline__img lazyload" data-src="img/dinner.png" src="#" alt="Праздничный банкет" />
+              </picture>
+              <p class="timeline__time">17:00</p>
+              <span class="timeline__dot"></span>
+              <p class="timeline__name">
+                <span class="lang-ru">Праздничный банкет</span>
+                <span class="lang-uz">Bayramona banket</span>
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Restaurant Location -->
+      <section class="place lazyload">
+        <div class="place__wrap">
+          <p class="place__detail">
+            <span class="lang-ru">Место проведение мероприятия</span>
+            <span class="lang-uz">Tadbir o'tkaziladigan joy</span>
+          </p>
+          <h2 class="place__title">Ratana</h2>
+          <p class="place__address">
+            <span class="lang-ru">Самаркандская область, Пастдаргомский район, посёлок Чархин</span>
+            <span class="lang-uz">Samarqand viloyati, Pastdarg'om tumani, Charxin qo'rg'oni</span>
+          </p>
+          <a
+            href="https://yandex.ru/maps/org/restaurant/128268404087?si=y5d8xtu46fx08v1r0da8mzzk3w"
+            class="place__map"
+            target="_blank"
+            aria-label="Место назначение, проложить маршрут"
+          >
+            <span class="lang-ru">Найти на карте</span>
+            <span class="lang-uz">Xaritadan topish</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Countdown Timer Section (Black & White background image) -->
+      <section class="counter lazyload">
+        <h2 class="visually-hidden">Мы в ожидании вашего присутствия</h2>
+        <div class="counter__wrap">
+          <p class="counter__waiting">
+            <span class="lang-ru">Ждем вас через...</span>
+            <span class="lang-uz">Sizni kutamiz...</span>
+          </p>
+          <ul class="counter__timer timer">
+            <li id='timer-day' class="timer__item">
+              <p class="timer__unit timer__unit_day timer__unit_num">0</p>
+              <p class="timer__unit timer__unit_day-desc timer__unit_desc">
+                <span class="lang-ru">дней</span>
+                <span class="lang-uz">kun</span>
+              </p>
+            </li>
+            <li id='timer-hour' class="timer__item">
+              <p class="timer__unit timer__unit_hour timer__unit_num">0</p>
+              <p class="timer__unit timer__unit_hour-desc timer__unit_desc">
+                <span class="lang-ru">часов</span>
+                <span class="lang-uz">soat</span>
+              </p>
+            </li>
+            <li id='timer-min' class="timer__item">
+              <p class="timer__unit timer__unit_min timer__unit_num">0</p>
+              <p class="timer__unit timer__unit_min-desc timer__unit_desc">
+                <span class="lang-ru">минут</span>
+                <span class="lang-uz">daqiqa</span>
+              </p>
+            </li>
+            <li id='timer-sec' class="timer__item">
+              <p class="timer__unit timer__unit_sec timer__unit_num">0</p>
+              <p class="timer__unit timer__unit_sec-desc timer__unit_desc">
+                <span class="lang-ru">секунд</span>
+                <span class="lang-uz">soniya</span>
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer__top">
+          <div class="footer__descriptions">
+            <p class="footer__desc">
+              <span class="lang-ru">С любовью</span>
+              <span class="lang-uz">Muhabbat bilan</span>
+            </p>
+            <p class="footer__desc">
+              <span class="lang-ru">Лазиз и Шахидабону</span>
+              <span class="lang-uz">Laziz va Shahidabonu</span>
+            </p>
+          </div>
+          <svg class="footer__img lazyload">
+            <use xlink:href="img/sprite.svg#logo" />
+          </svg>
+        </div>
+        <div class="footer__bottom">
+          <p class="footer__bottom-desc">
+            Copyright @2026 | Developer
+            <a
+              class="footer__bottom-link"
+              href="https://t.me/Rezvanmax"
+              target="_blank"
+              aria-label="Написать разработчику сайта"
+            >
+              By Rezvan
+            </a>
+            | All Rights Reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

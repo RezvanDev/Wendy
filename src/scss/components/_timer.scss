@@ -1,0 +1,104 @@
+.timer {
+  display: flex;
+  grid-gap: 30px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 80px;
+  }
+
+  &__unit {
+    text-align: center;
+    
+    &_num {
+      font-family: var(--desc-bold-font);
+      font-weight: 700;
+      font-size: 54px;
+      line-height: 1;
+      margin-bottom: 5px;
+      color: var(--accent-gold);
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    &_desc {
+      font-family: var(--desc-font);
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 1.2;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #dddddd;
+    }
+  }
+}
+
+@include laptop-L {
+  .timer {
+    grid-gap: 25px;
+    &__unit {
+      &_num {
+        font-size: 46px;
+      }
+      &_desc {
+        font-size: 13px;
+        letter-spacing: 1.5px;
+      }
+    }
+  }
+}
+
+@include laptop {
+  .timer {
+    grid-gap: 20px;
+    &__unit {
+      &_num {
+        font-size: 38px;
+      }
+      &_desc {
+        font-size: 12px;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .timer {
+    grid-gap: 15px;
+    &__item {
+      min-width: 65px;
+    }
+    &__unit {
+      &_num {
+        font-size: 32px;
+      }
+      &_desc {
+        font-size: 11px;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .timer {
+    grid-gap: 10px;
+    &__item {
+      min-width: 55px;
+    }
+    &__unit {
+      &_num {
+        font-size: 26px;
+      }
+      &_desc {
+        font-size: 10px;
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+}

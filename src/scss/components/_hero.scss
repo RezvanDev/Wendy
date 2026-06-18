@@ -1,0 +1,222 @@
+.hero {
+  background-color: var(--main-bg);
+  padding: 80px 0 60px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  &__subtitle {
+    font-family: var(--desc-font);
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    color: var(--accent-gold);
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    font-family: var(--title-font);
+    font-size: 72px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    color: var(--main-color);
+    margin-bottom: 15px;
+    line-height: 1.2;
+  }
+
+  &__date {
+    font-family: var(--title-font);
+    font-size: 28px;
+    letter-spacing: 4px;
+    color: var(--main-color);
+    margin-bottom: 40px;
+    border-top: 1px solid var(--border-gold);
+    border-bottom: 1px solid var(--border-gold);
+    padding: 10px 40px;
+    display: inline-block;
+  }
+
+  &__photo-wrap {
+    position: relative;
+    max-width: 440px;
+    width: 100%;
+    border: 1px solid var(--border-gold);
+    padding: 15px 15px 35px;
+    background: #fff;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.06);
+    border-radius: 4px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 25px 60px rgba(212, 175, 55, 0.12);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      right: 8px;
+      bottom: 28px;
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      pointer-events: none;
+    }
+  }
+
+  &__photo {
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+    display: block;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+  }
+}
+
+/* Language Switcher Styling */
+.lang-switch {
+  position: absolute;
+  top: -40px;
+  right: var(--containerOffset);
+  display: flex;
+  align-items: center;
+  grid-gap: 5px;
+  font-family: var(--desc-bold-font);
+  font-size: 14px;
+  letter-spacing: 1px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 5px 12px;
+  border-radius: 20px;
+  border: 1px solid var(--border-gold);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.02);
+  z-index: 10;
+
+  &__btn {
+    border: none;
+    padding: 3px 6px;
+    cursor: pointer;
+    color: #999;
+    transition: color 0.3s, font-weight 0.3s;
+    background: transparent;
+    font-size: 13px;
+
+    &.active {
+      color: var(--accent-gold);
+      font-weight: 700;
+    }
+
+    &:hover:not(.active) {
+      color: var(--main-color);
+    }
+  }
+
+  &__divider {
+    color: #ccc;
+    font-size: 12px;
+  }
+}
+
+@include laptop-L {
+  .hero {
+    &__title {
+      font-size: 60px;
+      letter-spacing: 6px;
+    }
+    &__date {
+      font-size: 24px;
+    }
+    &__photo-wrap {
+      max-width: 380px;
+    }
+  }
+}
+
+@include laptop {
+  .hero {
+    padding: 60px 0 40px;
+    &__title {
+      font-size: 52px;
+    }
+    &__photo-wrap {
+      max-width: 340px;
+    }
+  }
+}
+
+@include tablet {
+  .hero {
+    &__title {
+      font-size: 44px;
+      letter-spacing: 4px;
+    }
+    &__subtitle {
+      font-size: 16px;
+      letter-spacing: 4px;
+    }
+    &__date {
+      font-size: 20px;
+      margin-bottom: 30px;
+      padding: 8px 30px;
+    }
+    &__photo-wrap {
+      max-width: 310px;
+      padding: 10px 10px 25px;
+      &::after {
+        bottom: 20px;
+        top: 6px;
+        left: 6px;
+        right: 6px;
+      }
+    }
+  }
+  .lang-switch {
+    top: -30px;
+  }
+}
+
+@include mobile {
+  .hero {
+    padding: 80px 0 30px;
+    &__title {
+      font-size: 30px;
+      letter-spacing: 2px;
+    }
+    &__subtitle {
+      font-size: 13px;
+      letter-spacing: 2px;
+    }
+    &__date {
+      font-size: 16px;
+      margin-bottom: 20px;
+      padding: 6px 20px;
+    }
+    &__photo-wrap {
+      max-width: 260px;
+    }
+  }
+  .lang-switch {
+    top: -50px;
+    right: 15px;
+  }
+}

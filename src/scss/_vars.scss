@@ -1,0 +1,25 @@
+:root {
+  //! Шрифты
+  --title-font: "PlayfairDisplay", san-serif;
+  --desc-font: "Geometria-Light", san-serif;
+  --desc-bold-font: "Geometria-Bold", serif;
+
+  //! Цвета (Premium Gold & Ivory theme)
+  --main-color: #1a1a1a;
+  --main-bg: #faf8f5;
+  --main-border: #d4af37;
+  --accent-gold: #d4af37;
+  --accent-gold-hover: #c59b27;
+  
+  --place-wrap-bg: rgba(250, 248, 245, 0.9);
+  --map-bg: rgba(250, 248, 245, 0.8);
+  --counter-color: #ffffff;
+  
+  //! hovers
+  --hover-map-color: #d4af37;
+  --active-map-color: #faf8f5;
+  --active-map-bg: #1a1a1a;
+  --hover-link-color: #d4af37;
+  --active-link-color: #d4af37;
+}
+

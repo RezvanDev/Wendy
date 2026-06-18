@@ -1,0 +1,17 @@
+//! default
+@import "mixins";
+@import "fonts";
+@import "settings";
+@import "vars";
+
+//! components
+@import "./components/hero";
+@import "./components/friends";
+@import "./components/invite";
+@import "./components/calendar";
+@import "./components/timeline";
+@import "./components/place";
+@import "./components/wishes";
+@import "./components/counter";
+@import "./components/timer";
+@import "./components/footer";

@@ -1,0 +1,214 @@
+.timeline {
+  padding: 70px 0 25px;
+  &__title {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: max-content;
+    font-weight: 400;
+    font-size: 50px;
+    font-family: var(--title-font);
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    margin-bottom: 60px;
+    &::after {
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      display: block;
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: var(--main-color);
+    }
+  }
+
+  &__list {
+    position: relative;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 1.5px;
+      content: "";
+      display: block;
+      width: 0;
+      height: 100%;
+      border: 1px solid var(--main-border);
+    }
+  }
+
+  &__item {
+    position: relative;
+    height: 300px;
+    width: 20rem;
+    display: flex;
+    align-items: center;
+    padding: 10px 0 10px 5px;
+    margin: 10px 0 10px 100px;
+  }
+
+  &__img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -30em;
+    width: 130px;
+    height: 130px;
+  }
+
+  &__time {
+    position: absolute;
+    left: -9em;
+    font-weight: 400;
+    font-family: serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 32px;
+  }
+
+  &__dot {
+    position: absolute;
+    left: -105px;
+    display: block;
+    content: "";
+    width: 15px;
+    height: 15px;
+    border: 2px solid var(--main-border);
+    background-color: var(--main-border);
+    border-radius: 50%;
+  }
+
+  &__name {
+    font-weight: 400;
+    font-family: var(--title-font);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 32px;
+  }
+}
+
+@include laptop-L {
+  .timeline {
+    &__title {
+      font-size: 40px;
+    }
+    &__item {
+      height: 200px;
+      width: 20rem;
+      margin: 10px 0 10px 90px;
+    }
+    &__img {
+      left: -28rem;
+      width: 100px;
+      height: 100px;
+    }
+    &__time {
+      font-size: 28px;
+    }
+    &__dot {
+      left: -95px;
+    }
+    &__name {
+      font-size: 28px;
+    }
+  }
+}
+
+@include laptop {
+  .timeline {
+    padding: 50px 0 15px;
+    &__item {
+      height: 160px;
+      width: 20rem;
+      margin: 10px 0 10px 50px;
+    }
+    &__img {
+      left: -19rem;
+      width: 80px;
+      height: 80px;
+    }
+    &__time {
+      left: -8em;
+      font-size: 22px;
+    }
+    &__dot {
+      left: -53px;
+      width: 10px;
+      height: 10px;
+    }
+    &__name {
+      font-size: 22px;
+    }
+  }
+}
+
+@include tablet {
+  .timeline {
+    padding: 20px 0 10px;
+    &__title {
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+    &__item {
+      height: 130px;
+      width: 15rem;
+      margin: 10px 0 10px 30px;
+    }
+    &__img {
+      left: -12rem;
+      width: 60px;
+      height: 60px;
+    }
+    &__time {
+      left: -6em;
+      font-size: 18px;
+    }
+    &__dot {
+      left: -31px;
+      width: 7px;
+      height: 7px;
+    }
+    &__name {
+      font-size: 18px;
+      letter-spacing: 3px;
+    }
+  }
+}
+
+@include mobile {
+  .timeline {
+    &__title {
+      font-size: 18px;
+      margin-bottom: 20px;
+      &::after {
+        bottom: -5px;
+      }
+    }
+    &__item {
+      height: 100px;
+      width: 8rem;
+      margin: 10px 0 10px 15px;
+    }
+    &__img {
+      left: -9em;
+      width: 50px;
+      height: 50px;
+    }
+    &__time {
+      left: -5em;
+      font-size: 16px;
+    }
+    &__dot {
+      left: -16px;
+      width: 7px;
+      height: 7px;
+    }
+    &__name {
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+  }
+}

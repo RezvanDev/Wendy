@@ -1,0 +1,178 @@
+.questionnaire {
+  padding: 70px 0;
+  &__title {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: max-content;
+    font-weight: 400;
+    font-size: 50px;
+    font-family: var(--title-font);
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    margin-bottom: 60px;
+    &::after {
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      display: block;
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: var(--main-color);
+    }
+  }
+
+  &__desc {
+    font-family: var(--desc-font);
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  &__desc-strong {
+    position: relative;
+    font-family: var(--desc-bold-font);
+    font-weight: 700;
+    font-size: 30px;
+    &::after {
+      position: absolute;
+      left: 0;
+      bottom: 6px;
+      display: block;
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: var(--main-color);
+    }
+  }
+
+  &__ask {
+    font-family: var(--desc-font);
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  &__link {
+    position: relative;
+    font-family: var(--desc-bold-font);
+    font-weight: 700;
+    font-size: 30px;
+    transition: color 0.3s ease-in-out;
+    &::after {
+      position: absolute;
+      left: 0;
+      bottom: 6px;
+      display: block;
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: var(--main-color);
+      transition: background-color 0.3s ease-in-out;
+    }
+    @include hover {
+      color: var(--hover-link-color);
+      &::after {
+        background-color: var(--hover-link-color);
+      }
+    }
+    &:active {
+      color: var(--active-link-color);
+      &::after {
+        background-color: var(--active-link-color);
+      }
+    }
+  }
+}
+
+@include laptop-L {
+  .questionnaire {
+    &__title {
+      font-size: 37px;
+    }
+    &__desc {
+      font-size: 24px;
+    }
+    &__desc-strong {
+      font-size: 26px;
+    }
+    &__ask {
+      font-size: 24px;
+    }
+    &__link {
+      font-size: 26px;
+    }
+  }
+}
+
+@include laptop {
+  .questionnaire {
+    padding: 50px 0;
+    &__title {
+      font-size: 30px;
+      letter-spacing: 5px;
+      margin-bottom: 50px;
+    }
+    &__desc {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    &__desc-strong {
+      font-size: 22px;
+    }
+    &__ask {
+      font-size: 20px;
+    }
+    &__link {
+      font-size: 22px;
+    }
+  }
+}
+
+@include tablet {
+  .questionnaire {
+    padding: 40px 0;
+    &__title {
+      font-size: 28px;
+      letter-spacing: 3px;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@include mobile {
+  .questionnaire {
+    padding: 20px 0;
+    &__title {
+      font-size: 16px;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+      &::after {
+        bottom: -5px;
+      }
+    }
+    &__desc {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    &__desc-strong {
+      font-size: 16px;
+      &::after {
+        bottom: 3px;
+      }
+    }
+    &__ask {
+      font-size: 14px;
+    }
+    &__link {
+      font-size: 16px;
+      &::after {
+        bottom: 3px;
+      }
+    }
+  }
+}

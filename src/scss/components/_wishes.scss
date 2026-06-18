@@ -1,0 +1,230 @@
+.wishes-rsvp {
+  padding: 80px 0;
+  background-color: var(--main-bg);
+  text-align: center;
+
+  &__title {
+    font-family: var(--title-font);
+    font-size: 48px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: var(--main-color);
+  }
+
+  &__desc {
+    font-family: var(--desc-font);
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 50px;
+    color: #555;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    strong {
+      font-family: var(--desc-bold-font);
+      color: var(--accent-gold);
+    }
+  }
+
+  &__form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    background: #fff;
+    padding: 40px;
+    border: 1px solid var(--border-gold);
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+  }
+
+  &__field {
+    margin-bottom: 25px;
+    
+    label, &__label {
+      display: block;
+      font-family: var(--desc-bold-font);
+      font-size: 16px;
+      margin-bottom: 8px;
+      color: var(--main-color);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    input[type="text"], textarea {
+      width: 100%;
+      padding: 15px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 6px;
+      font-family: var(--desc-font);
+      font-size: 16px;
+      color: var(--main-color);
+      background-color: #fafafa;
+      transition: border-color 0.3s, box-shadow 0.3s;
+      
+      &:focus {
+        border-color: var(--accent-gold);
+        box-shadow: 0 0 5px rgba(212, 175, 55, 0.2);
+        outline: none;
+      }
+    }
+  }
+
+  &__options {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 12px;
+    margin-top: 10px;
+  }
+
+  &__option {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-family: var(--desc-font);
+    font-size: 16px;
+    color: var(--main-color);
+
+    input[type="radio"] {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 20px;
+      height: 20px;
+      border: 1px solid var(--accent-gold);
+      border-radius: 50%;
+      margin-right: 12px;
+      outline: none;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s;
+      
+      &::before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        background-color: var(--accent-gold);
+        border-radius: 50%;
+        opacity: 0;
+        transition: opacity 0.2s;
+      }
+
+      &:checked::before {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__submit-btn {
+    display: block;
+    width: 100%;
+    padding: 18px;
+    background-color: var(--main-color);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-family: var(--desc-bold-font);
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    text-align: center;
+
+    &:hover {
+      background-color: var(--accent-gold);
+    }
+  }
+
+  &__success {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 50px 40px;
+    border: 1px solid var(--border-gold);
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+    
+    &-heart {
+      font-size: 64px;
+      color: var(--accent-gold);
+      animation: heartbeat 1.5s infinite;
+      margin-bottom: 20px;
+    }
+    
+    &-title {
+      font-family: var(--title-font);
+      font-size: 36px;
+      color: var(--main-color);
+      margin-bottom: 15px;
+    }
+    
+    &-text {
+      font-family: var(--desc-font);
+      font-size: 18px;
+      color: #555;
+      line-height: 1.6;
+    }
+  }
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.15);
+  }
+  40% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1.15);
+  }
+  80% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@include tablet {
+  .wishes-rsvp {
+    padding: 60px 0;
+    
+    &__title {
+      font-size: 36px;
+    }
+    &__desc {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+    &__form {
+      padding: 30px 20px;
+    }
+  }
+}
+
+@include mobile {
+  .wishes-rsvp {
+    padding: 40px 0;
+    
+    &__title {
+      font-size: 26px;
+      letter-spacing: 2px;
+    }
+    &__desc {
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+    &__form {
+      padding: 20px 15px;
+    }
+    &__option {
+      font-size: 15px;
+    }
+  }
+}
