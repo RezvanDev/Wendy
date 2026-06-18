@@ -156,35 +156,49 @@
 
 @include mobile {
   .place {
+    padding: 60px 0;
+    padding-top: 60px;
+    height: auto;
+    min-height: auto;
     background-image: image-set(
       url("../img/park-hall_mobile.webp") type("image/webp"),
       url("../img/park-hall_mobile.png") type("image/png")
     );
     &__wrap {
-      justify-content: center;
-      max-width: inherit;
-      max-height: inherit;
-      padding: 5px 30px;
-      border: none;
-      border-radius: 0;
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: none;
+      width: calc(100% - 30px);
+      margin: 0 auto;
+      max-width: 450px;
+      height: auto;
+      padding: 35px 20px;
+      border: 1px solid var(--border-gold);
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     }
     &__detail {
-      max-width: 260px;
+      max-width: 100%;
       font-size: 16px;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
     }
     &__title {
-      font-size: 18px;
+      font-size: 24px;
+      margin-bottom: 15px;
     }
     &__address {
       font-size: 16px;
-      margin-bottom: 5px;
+      margin-bottom: 25px;
+      line-height: 1.4;
     }
     &__map {
-      width: 150px;
-      height: 30px;
+      width: 180px;
+      height: 45px;
       padding: 0 10px;
       font-size: 14px;
+      border: 1px solid var(--border-gold);
+      border-radius: 6px;
     }
   }
 }
