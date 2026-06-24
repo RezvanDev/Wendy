@@ -139,3 +139,100 @@ body:not(.lang-uz) .lang-ru {
   display: inline-block;
 }
 
+//! Print Styles for PDF generation
+@media print {
+  /* Override GSAP and Lazyload hidden states and force visibility */
+  .friends,
+  #invite1,
+  .timeline__title,
+  #timeline1, #timeline2, #timeline3, #timeline4,
+  .place,
+  .place__wrap,
+  .lazyload,
+  .lazyloading,
+  #timer-day, #timer-hour, #timer-min, #timer-sec {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    scale: 1 !important;
+  }
+
+  html, body {
+    background-color: #faf8f5 !important;
+    color: #1a1a1a !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Hide dynamic, interactive, or heavy elements */
+  .lang-switch,
+  .counter,
+  .place__map,
+  #__bs_notify__ {
+    display: none !important;
+  }
+
+  /* Avoid element splitting */
+  section {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    padding: 30px 0 !important;
+  }
+
+  /* Split before calendar so it forms a clean page 2 */
+  .wedding-calendar {
+    page-break-before: always !important;
+    break-before: always !important;
+    padding-top: 50px !important;
+  }
+
+  .hero {
+    min-height: auto !important;
+    padding: 50px 0 !important;
+  }
+
+  .hero__photo-wrap {
+    box-shadow: none !important;
+    border: 1px solid #d4af37 !important;
+    max-width: 320px !important;
+    margin: 0 auto !important;
+    padding: 10px 10px 25px !important;
+    &::after {
+      bottom: 20px !important;
+    }
+  }
+
+  .calendar-grid {
+    box-shadow: none !important;
+    background-color: rgba(255, 255, 255, 0.9) !important;
+  }
+
+  .place {
+    padding-top: 0 !important;
+    height: auto !important;
+    background-image: none !important;
+    padding: 40px 0 !important;
+  }
+
+  .place__wrap {
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    transform: none !important;
+    margin: 0 auto !important;
+    max-width: 500px !important;
+    height: auto !important;
+    border: 1px solid #d4af37 !important;
+    box-shadow: none !important;
+    padding: 30px !important;
+    background-color: rgba(255, 255, 255, 0.9) !important;
+  }
+
+  .footer {
+    padding: 40px 0 10px !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+}
+
+
